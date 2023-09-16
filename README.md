@@ -2,7 +2,8 @@
 
 ## 🔭 I'm Ehtesham here planning to do something big....
 ## 👯 I'm looking to collaborate on python projects and any project related to Data Science
-## 📫 You can reach me through e-mails. ### Email address - ehteshamansariadn@gmail.com
+## 📫 You can reach me through e-mails. 
+### Email address - ehteshamansariadn@gmail.com
 ## 😄 So you can pronouns me He/Him
 ## ⚡ Fun Fact - Just meet me somewhere you would find it....
 
