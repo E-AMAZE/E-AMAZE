@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: all 0.4s;
+  /* border: 1px solid red; */
+}
+
+body {
+  background: linear-gradient(to left, rgb(1, 13, 67), rgb(48, 36, 129));
+  height: 100000px;
+}
+.header {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  background: transparent;
+  position: relative;
+  text-align: center;
+  margin-left: 50px;
+  line-height: 100px;
+  border: 5px solid #00ff11;
+  border-radius: 20px;
+  transform: rotate(45deg);
+  box-shadow: 0 0 50px #00ff1192;
+}
+.logo p {
+  font-size: 40px;
+  position: absolute;
+  top: -32%;
+  left: 30%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  margin: 0;
+  color: #00ff11;
+  transform: rotate(-45deg);
+}
+
+.options {
+  display: inline-flex;
+  flex-direction: row;
+  right: 0;
+  margin-left: auto;
+  margin-right: 50px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+}
+.options ul {
+  list-style: decimal-leading-zero;
+  display: flex;
+  flex-direction: row;
+}
+.options ul li {
+  margin-left: 50px;
+}
+.options ul li a {
+  text-decoration: none;
+  color: #b3aab6;
+  font-size: 22px;
+}
+.options ul li a:hover {
+  color: #00ff11;
+}
+.options ul li::marker {
+  color: #00ff11;
+  font-size: 22px;
+}
+.resume {
+  margin-left: 20px;
+  border: 1px solid #00ff11;
+  padding: 10px;
+  color: #00ff11;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.resume:hover {
+  background-color: #d6f4cf23;
+}
+.hamburger {
+  display: none;
+}
+.mobile-menu {
+  display: none;
+}
+
+/* small Screen CSS */
+
+@media (max-width: 850px) {
+  .options {
+    display: none;
+  }
+  .logo {
+    margin-left: 30px;
+  }
+  .resume {
+    margin-left: -20px;
+    font-size: 30px;
+  }
+  .cross {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    animation: fadeIn 1s forwards;
+}
+
+.line {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: #3498db;
+    transform-origin: center;
+}
+
+.line1 {
+    transform: rotate(45deg);
+    top: 50%;
+}
+
+.line2 {
+    transform: rotate(-45deg);
+    top: 50%;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+  .hamburger {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    right: 0;
+    margin-left: auto;
+    margin-right: 30px;
+    align-items: end;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .bar {
+    display: block;
+    height: 4px;
+    /* width: 40px; */
+    text-align: end;
+    border-radius: 2px;
+    background-color: #00ff11;
+    margin: 7px 0;
+    transition: all 0.3s ease-in-out;
+  }
+  .close{
+    animation: close-hamburger 0.5s linear forwards;
+  }
+  @keyframes close-hamburger{
+    0%{margin: 7px 0;
+    opacity: 1;}
+    90%{margin: 0 0;
+    opacity: 0;}
+    100%{margin: 7px 0;
+    opacity: 1;}
+
+  }
+  .bar-1 {
+    width: 60px;
+    top: 0;
+  }
+  .bar-2 {
+    width: 50px;
+    top: 15;
+  }
+  .bar-3 {
+    width: 30px;
+    top: 30;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    background: linear-gradient(to right, rgb(82, 17, 247), rgb(87, 62, 247));
+    padding: 80px 30px;
+    width: 70vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    animation: slideRight 1s ease-in-out forwards;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .show-menu {
+    display: flex;
+    right: 0;
+    opacity: 1;
+    /* animation: slideRightBack 1s ease-in-out forwards; */
+    visibility: visible;
+  }
+  @keyframes slideRight {
+    0% {
+      right: -500px;
+    }
+    100% {
+      right: 0;
+    }
+    }
+    
+    @keyframes slideRightBack {
+    0% {
+      right: 0;
+    }
+    100% {
+      right: -500px;
+    }
+    }
+  .mobile-menu ul {
+    list-style: decimal-leading-zero;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+  .mobile-menu ul li {
+    margin-bottom: 20px;
+  }
+  .mobile-menu ul li::marker {
+    color: #00ff11;
+    font-size: 30px;
+  }
+  .mobile-menu ul li a {
+    text-decoration: none;
+    color: #b3aab6;
+    font-size: 30px;
+  }
+  .mobile-menu ul li a:hover {
+    color: #00ff11;
+  }
+}
