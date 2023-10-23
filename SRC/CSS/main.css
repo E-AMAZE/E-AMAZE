@@ -371,6 +371,7 @@ p {
 }
 .li-items ul li{
   font-size: 12px;
+  font-family: 'Sometype Mono', monospace;
   color: #b1c0ec;
 }
 
