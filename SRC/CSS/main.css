@@ -12,6 +12,50 @@ body {
   background: linear-gradient(to left, rgb(1, 13, 67), rgb(48, 36, 129));
   height: 100000px;
 }
+
+.main-body{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.content{
+  display: flex;
+  flex-direction: row;
+}
+.left{
+  width: 40px;
+  position: fixed;
+  bottom: 0;
+  left: 40px;
+  right: auto;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hr-line{
+  width: 1px;
+  height: 150px;
+  background-color: #00ff11;
+}
+.left .icons{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.icons a{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 50px;
+  color: red;
+}
+.icons a svg:hover{
+color: #00ff11;
+}
+
 .header {
   padding: 30px 0;
   display: flex;
