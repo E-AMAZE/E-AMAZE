@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap");
 
 * {
   box-sizing: border-box;
@@ -7,25 +9,30 @@
   transition: all 0.4s;
   /* border: 1px solid red; */
 }
-:root{
-  --main_color: #00ff11;
+:root {
+  --main_color: #00ff6a;
 }
 
 body {
-  background: linear-gradient(to left, rgb(1, 13, 67), rgb(48, 36, 129));
+  background: linear-gradient(to left, rgb(14, 30, 103), rgb(18, 4, 103));
+  margin: 0;
+  padding: 0;
   height: 100000px;
 }
 
-.main-body{
+.main-body {
+  z-index: -1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 }
-.content{
+.content {
   display: flex;
   flex-direction: row;
 }
-.left{
+.left {
   width: 40px;
   position: fixed;
   bottom: 0;
@@ -37,27 +44,27 @@ body {
   justify-content: center;
   align-items: center;
 }
-.hr-line{
+.hr-line {
   width: 1px;
   height: 100px;
   background-color: var(--main_color);
 }
-.left .icons{
+.left .icons {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: center;
   margin-bottom: 16px;
 }
 
-.icons a{
+.icons a {
   transition: all 0.4s ease-in-out;
   margin-top: 10px;
 }
-.icons a:hover{
+.icons a:hover {
   margin-bottom: 10px;
   margin-top: 0;
 }
-.right{
+.right {
   width: 40px;
   position: fixed;
   bottom: 0;
@@ -69,36 +76,40 @@ body {
   justify-content: center;
   align-items: center;
 }
-.right p{
+.right p {
   transform: rotate(0deg);
   transform-origin: left top;
   white-space: nowrap;
   writing-mode: vertical-rl;
   margin-bottom: 20px;
 }
-.right p a{
+.right p a {
   text-decoration: none;
   color: var(--main_color);
   font-size: 15px;
   transition: all 0.8s ease-in-out;
 }
-.right p a:hover{
+.right p a:hover {
   margin-bottom: 30px;
 }
-
 
 .header {
   padding: 30px 0;
   display: flex;
   flex-direction: row;
-  /* justify-content: center; */
+  z-index: 99999;
+  background: linear-gradient(to left, rgb(14, 30, 103), rgb(18, 4, 103));
+  margin: 0;
   position: fixed;
+  top: 0;
   width: 100vw;
   align-items: center;
+  /* box-shadow: 0 0 20px rgb(8, 8, 123); */
 }
 
 .logo {
   width: 70px;
+  z-index: 99999;
   height: 70px;
   background: transparent;
   position: relative;
@@ -108,7 +119,7 @@ body {
   border: 5px solid var(--main_color);
   border-radius: 20px;
   transform: rotate(45deg);
-  box-shadow: 0 0 50px var(--main_color)92;
+  box-shadow: 0 0 50px var(--main_color) 92;
 }
 .logo p {
   font-size: 40px;
@@ -173,6 +184,62 @@ body {
   display: none;
 }
 
+.intro{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 70vw;
+  justify-content: center;
+  align-items: center;
+  top: 200px;
+  /* left: 200px; */
+}
+.intro p{
+  padding: 0;
+  margin: 0;
+}
+.intro .para-1 {
+  color: var(--main_color);
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 10px;
+  width: 70vw;
+  margin-left: 5px;
+}
+.intro .para-2 {
+  color: #ccd6f6;
+  margin-top: 0;
+  width: 70vw;
+  font-size: clamp(32px, 4.5vw, 50px);
+  font-family: "Fira Mono", monospace;
+}
+.intro .para-3 {
+  color: #8892b0;
+  font-family: "Fira Mono", monospace;
+  font-size: clamp(32px, 4.5vw, 50px);
+  white-space: normal;
+  word-wrap: break-word;
+  width: 70vw;
+  line-height: 0.9;
+}
+
+.intro .para-4{
+  width: 70vw;
+  display: block;
+  white-space: normal;
+  padding: 10px;
+  text-align: start;
+  word-wrap: break-word;
+}
+
+
+
+
+
+
+
+
+
 /* small Screen CSS */
 
 @media (max-width: 850px) {
@@ -186,7 +253,7 @@ body {
     margin-left: -20px;
     font-size: 30px;
   }
-  
+
   .hamburger {
     align-items: center;
     display: flex;
@@ -210,17 +277,22 @@ body {
     margin: 7px 0;
     transition: all 0.3s ease-in-out;
   }
-  .close{
+  .close {
     animation: close-hamburger 0.5s linear forwards;
   }
-  @keyframes close-hamburger{
-    0%{margin: 7px 0;
-    opacity: 1;}
-    90%{margin: 0 0;
-    opacity: 0;}
-    100%{margin: 7px 0;
-    opacity: 1;}
-  
+  @keyframes close-hamburger {
+    0% {
+      margin: 7px 0;
+      opacity: 1;
+    }
+    90% {
+      margin: 0 0;
+      opacity: 0;
+    }
+    100% {
+      margin: 7px 0;
+      opacity: 1;
+    }
   }
   .bar-1 {
     width: 60px;
@@ -235,57 +307,55 @@ body {
     top: 30;
   }
 
-.bar-open {
+  .bar-open {
     position: absolute;
     width: 40px;
     height: 5px;
     transform-origin: center;
     transition: all 0.5s ease-in;
-}
+  }
 
-.bar-1-open {
+  .bar-1-open {
     transform: rotate(45deg);
     top: 10%;
     width: 50px;
+  }
+  .bar-3-open {
+    opacity: 0;
+  }
 
-}
-.bar-3-open{
-  opacity: 0;
-}
-
-.bar-2-open {
+  .bar-2-open {
     transform: rotate(-45deg);
     width: 50px;
     top: 1px;
     left: -50px;
-}
+  }
 
-@keyframes fadeIn {
+  @keyframes fadeIn {
     from {
-        transform: scale(0);
-        opacity: 0;
+      transform: scale(0);
+      opacity: 0;
     }
     to {
-        transform: scale(1);
-        opacity: 1;
+      transform: scale(1);
+      opacity: 1;
     }
-}
+  }
 
-.mobile-menu-container{
-  display: flex;
-  flex-direction: row;
-}
-.empty-sp-cont{
-  width: 28vw;
-  display: none;
-  height: 100vw;
-  position: fixed;
-  left: 0;
-  animation: slideLeft 0.8s ease-in-out;
-  background-color: rgba(157, 207, 252, 0.658);
-  box-shadow: 0 0 10vw 10vw rgba(157, 207,252, 0.658);
-}
-
+  .mobile-menu-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .empty-sp-cont {
+    width: 28vw;
+    display: none;
+    height: 100vw;
+    position: fixed;
+    left: 0;
+    animation: slideLeft 0.8s ease-in-out;
+    background-color: rgba(157, 207, 252, 0.658);
+    box-shadow: 0 0 10vw 10vw rgba(157, 207, 252, 0.658);
+  }
 
   .mobile-menu {
     display: flex;
@@ -303,8 +373,7 @@ body {
     display: none;
     opacity: 0;
     visibility: hidden;
-  box-shadow: 0 0 10vw 0 rgba(157, 208, 252, 0.519);
-
+    box-shadow: 0 0 10vw 0 rgba(157, 208, 252, 0.519);
   }
   .show-menu {
     display: flex;
@@ -319,12 +388,16 @@ body {
     100% {
       right: 0;
     }
+  }
+  @keyframes slideLeft {
+    0% {
+      opacity: 0;
     }
-    @keyframes slideLeft{
-      0%{opacity: 0;}
-      100%{opacity: 1;}
+    100% {
+      opacity: 1;
     }
-  
+  }
+
   .mobile-menu ul {
     list-style: decimal-leading-zero;
     display: flex;
@@ -347,8 +420,13 @@ body {
   .mobile-menu ul li a:hover {
     color: var(--main_color);
   }
-  .right{
+  .right {
     display: none;
   }
-  .left{display: none;}
+  .left {
+    display: none;
+  }
+  .intro {
+    left: 0;
+  }
 }
