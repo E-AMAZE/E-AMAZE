@@ -643,15 +643,15 @@ align-items: center;
     flex-direction: row;
   }
   .empty-sp-cont {
-    width: 28vw;
+    width: 30vw;
     display: none;
     height: 1000px;
     position: fixed;
     left: 0;
     top: 0;
     animation: slideLeft 0.8s ease-in-out;
-    background-color: rgba(157, 207, 252, 0.658);
-    box-shadow: 0 0 10vw 10vw rgba(157, 207, 252, 0.658);
+    background-color: rgba(67, 62, 62, 0.4);
+    /* box-shadow: 0 0 10vw 10vw rgba(157, 207, 252, 0.658); */
   }
 
   .mobile-menu {
@@ -670,7 +670,7 @@ align-items: center;
     display: none;
     opacity: 0;
     visibility: hidden;
-    box-shadow: 0 0 10vw 0 rgba(157, 208, 252, 0.519);
+    /* box-shadow: 0 0 10vw 0 rgba(157, 208, 252, 0.519); */
   }
   .show-menu {
     display: flex;
