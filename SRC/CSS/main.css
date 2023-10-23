@@ -73,7 +73,7 @@ p {
   width: 40px;
   position: fixed;
   bottom: 0;
-  left: 65px;
+  left: 55px;
   right: auto;
   z-index: 10;
   display: flex;
@@ -649,8 +649,9 @@ align-items: center;
     position: fixed;
     left: 0;
     top: 0;
+    filter: blur(100%);
     animation: slideLeft 0.8s ease-in-out;
-    background-color: rgba(67, 62, 62, 0.4);
+    background-color: rgba(59, 59, 83, 0.536);
     /* box-shadow: 0 0 10vw 10vw rgba(157, 207, 252, 0.658); */
   }
 
