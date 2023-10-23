@@ -46,15 +46,7 @@ body {
   margin-bottom: 16px;
 }
 
-.icons a{
-  display: inline-block;
-  text-decoration: none;
-  font-size: 50px;
-  color: red;
-}
-.icons a svg:hover{
-color: #00ff11;
-}
+
 
 .header {
   padding: 30px 0;
