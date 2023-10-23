@@ -367,7 +367,11 @@ p {
 }
 .li-items ul li::marker {
   list-style-type: circle;
-  font-size: 20px;
+  font-size: 15px;
+}
+.li-items ul li{
+  font-size: 12px;
+  color: #b1c0ec;
 }
 
 /* small Screen CSS */
