@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap");
 
 * {
   box-sizing: border-box;
@@ -12,12 +13,48 @@
 :root {
   --main_color: #00ff6a;
 }
+/* 
+ul li::marker{
+  font-family: 'Sometype Mono', monospace;
+} */
 
+p {
+  color: #8892b0;
+}
 body {
   background: linear-gradient(to left, rgb(14, 30, 103), rgb(18, 4, 103));
   margin: 0;
   padding: 0;
   height: 100000px;
+}
+p {
+  font-family: "Montserrat", sans-serif;
+}
+
+.highilight-g {
+  text-decoration: none;
+  color: var(--main_color);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  font-weight: 800;
+  display: inline-block;
+  position: relative;
+}
+.highilight-g:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--main_color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.highilight-g:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .main-body {
@@ -111,6 +148,7 @@ body {
   width: 70px;
   z-index: 99999;
   height: 70px;
+  cursor: pointer;
   background: transparent;
   position: relative;
   text-align: center;
@@ -140,7 +178,7 @@ body {
   margin-right: 50px;
   justify-content: center;
   align-items: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Sometype Mono", monospace;
   font-weight: 200;
 }
 .options ul {
@@ -149,31 +187,44 @@ body {
   flex-direction: row;
 }
 .options ul li {
-  margin-left: 50px;
+  margin: 0 40px;
 }
 .options ul li a {
   text-decoration: none;
   color: #b3aab6;
-  font-size: 22px;
+  font-size: 18px;
+  font-weight: 400;
 }
 .options ul li a:hover {
   color: var(--main_color);
 }
 .options ul li::marker {
   color: var(--main_color);
-  font-size: 22px;
+  font-size: 18px;
 }
 .resume {
   margin-left: 20px;
   border: 1px solid var(--main_color);
-  padding: 10px;
+  padding: 15px;
   color: var(--main_color);
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
-.resume:hover {
+.commonbutton {
+  /* margin-left: 20px; */
+  border: 1px solid var(--main_color);
+  padding: 15px;
+  color: var(--main_color);
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.resume:hover,
+.commonbutton:hover {
   background-color: #d6f4cf23;
 }
 .hamburger {
@@ -184,29 +235,29 @@ body {
   display: none;
 }
 
-.intro{
+.intro {
   display: flex;
   flex-direction: column;
   position: relative;
   width: 70vw;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   top: 200px;
-  /* left: 200px; */
 }
-.intro p{
+.intro p {
   padding: 0;
   margin: 0;
 }
 .intro .para-1 {
   color: var(--main_color);
-  font-size: 20px;
-  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-family: "Sometype Mono", monospace;
   margin-bottom: 10px;
   width: 70vw;
   margin-left: 5px;
 }
 .intro .para-2 {
+  font-weight: 1000;
   color: #ccd6f6;
   margin-top: 0;
   width: 70vw;
@@ -215,30 +266,109 @@ body {
 }
 .intro .para-3 {
   color: #8892b0;
+  font-weight: 600;
   font-family: "Fira Mono", monospace;
   font-size: clamp(32px, 4.5vw, 50px);
   white-space: normal;
+  margin: 10px 0;
   word-wrap: break-word;
   width: 70vw;
   line-height: 0.9;
 }
 
-.intro .para-4{
+.intro .para-4 {
   width: 70vw;
   display: block;
   white-space: normal;
-  padding: 10px;
+  /* padding: 10px; */
+  margin: 10px 0;
   text-align: start;
   word-wrap: break-word;
 }
+.para-4 p {
+  color: #8892b0;
+  max-width: 540px;
+}
 
+.linkdin-btn {
+  margin-top: 10px;
+  display: block;
+}
+.linkdin-btn a {
+  text-decoration: none;
+  color: var(--main_color);
+}
 
+.menu-items-expn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 70vw;
+  position: relative;
+  top: 60vh;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.content ul {
+  list-style: decimal-leading-zero;
+  margin-left: 100px;
+}
+.content ul li::marker {
+  font-size: 25px;
+  color: var(--main_color);
+  font-family: "Sometype Mono", monospace;
+  font-weight: 400;
+}
 
+#about {
+  max-width: 700px;
+}
+.mie-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 40px 0;
+}
+.mie-title hr {
+  color: #8892b0;
+}
+.mie-title h2 {
+  font-size: 35px;
+  font-family: "Sometype Mono", monospace;
+  color: #ccd6f6;
+}
 
+.mie-title-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
 
+.mietc-text-area {
+  width: 70%;
+}
+.mietc-text-area .p_ {
+  margin: 30px 0;
+}
 
+.meitc-image {
+  width: 30%;
+}
 
+.li-items {
+  display: flex;
+  flex-direction: row;
+}
+.li-items ul li::marker {
+  list-style-type: circle;
+  font-size: 20px;
+}
 
 /* small Screen CSS */
 
@@ -349,9 +479,10 @@ body {
   .empty-sp-cont {
     width: 28vw;
     display: none;
-    height: 100vw;
+    height: 1000px;
     position: fixed;
     left: 0;
+    top: 0;
     animation: slideLeft 0.8s ease-in-out;
     background-color: rgba(157, 207, 252, 0.658);
     box-shadow: 0 0 10vw 10vw rgba(157, 207, 252, 0.658);
@@ -410,12 +541,12 @@ body {
   }
   .mobile-menu ul li::marker {
     color: var(--main_color);
-    font-size: 30px;
+    font-size: 20px;
   }
   .mobile-menu ul li a {
     text-decoration: none;
     color: #b3aab6;
-    font-size: 30px;
+    font-size: 20px;
   }
   .mobile-menu ul li a:hover {
     color: var(--main_color);
