@@ -557,11 +557,13 @@ align-items: center;
   color: rgb(255, 255, 255);
   background-color: #00ff6a77;
   /* box-shadow: 0 0 5px var(--main_color); */
+  display: none;
   transition: all 0.5s;
 }
 .back-to-top:hover{
   background-color: var(--main_color);
   color: white;
+  bottom: 35px;
   box-shadow: rgb(105, 105, 237);
 }
 
@@ -856,6 +858,7 @@ align-items: center;
   }
   .p__{
     font-size: 15px;
+    display: list-item;
   }
   #contact li::marker{
     font-size: 15px;
