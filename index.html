@@ -18,9 +18,9 @@
             <div class="options">
                 <ul>
                     <li><a href="#content">About</a></li>
-                    <li><a href="#">Experence</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#exper">Experence</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="resume">Resume</div>
             </div>
@@ -33,12 +33,12 @@
                 <div class="empty-sp-cont"></div>
                 <div class="mobile-menu">
                     <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#">Experence</a></li>
-                        <li><a href="#">Work</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#about" class="mob-opt">About</a></li>
+                        <li><a href="#exper" class="mob-opt">Experence</a></li>
+                        <li><a href="#work" class="mob-opt">Work</a></li>
+                        <li><a href="#contact" class="mob-opt">Contact</a></li>
                     </ul>
-                    <div class="resume">Resume</div>
+                    <div class="resume mob-opt" onclick="window.location.href='#'">Resume</div>
 
                 </div>
             </div>
@@ -155,7 +155,7 @@
                                             <p class="p_p">But I'm also looking for opportunities to work together.</p>
                                             <p class="p_p">If you liked my work, and want to get in touch:</p>
                                             <div class="commonbutton contact-btn">
-                                                <a href="#contact"><span>Say Hello!</span></a>
+                                                <a href="mailto:ehteshamansariadn@gmail.com"><span>Say Hello!</span></a>
                                             </div>
 
                                         </div>
@@ -225,14 +225,55 @@
                 <div class="hr-line"></div>
 
             </div>
+            <div class="back-to-top" onclick="window.location.href='#main-body'">
+                <span>Top</span>
+            </div>
         </div>
 
     </div>
 
 
 
+    <script>
+        const backToTopButton = document.querySelector(".back-to-top");
 
+window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const halfPageHeight = window.innerHeight / 2;
 
+    if (scrollY > halfPageHeight) {
+        backToTopButton.style.display = "block";
+    } else {
+        backToTopButton.style.display = "none";
+    }
+});
+
+backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+    </script>
+
+<script>
+    const header = document.querySelector(".header");
+let prevScrollPos = window.pageYOffset;
+
+window.addEventListener("scroll", () => {
+    const currentScrollPos = window.pageYOffset;
+
+    if (currentScrollPos === 0) {
+        header.classList.remove("hidden");
+    } else if (currentScrollPos < prevScrollPos) {
+        header.classList.remove("hidden");
+    } else {
+        header.classList.add("hidden");
+    }
+
+    prevScrollPos = currentScrollPos;
+});
+</script>
     <script src="./SRC/JS/hmr.js"></script>
     <script src="./SRC/JS/hmmmenu.js"></script>
 </body>

@@ -14,6 +14,9 @@
   --main_color: #00ff6a;
   --para_col: #c3cdef;
 }
+html{
+  scroll-behavior: smooth;
+}
 /* 
 ul li::marker{
   font-family: 'Sometype Mono', monospace;
@@ -141,7 +144,11 @@ p {
   top: 0;
   width: 100vw;
   align-items: center;
+  transition: transform 0.5s;
   /* box-shadow: 0 0 20px rgb(8, 8, 123); */
+}
+.hidden {
+  transform: translateY(-100%);
 }
 
 .logo {
@@ -157,6 +164,7 @@ p {
   border: 5px solid var(--main_color);
   border-radius: 20px;
   transform: rotate(45deg);
+  animation: from_top 0.5s ease-in;
   box-shadow: 0 0 50px var(--main_color) 92;
 }
 .logo p {
@@ -180,6 +188,9 @@ p {
   align-items: center;
   font-family: "Sometype Mono", monospace;
   font-weight: 200;
+  animation: from_top 0.5s ease-in;
+
+
 }
 .options ul {
   list-style: decimal-leading-zero;
@@ -188,12 +199,16 @@ p {
 }
 .options ul li {
   margin: 0 40px;
+  animation: from_top 0.5s ease-in;
+
 }
 .options ul li a {
   text-decoration: none;
   color: #b3aab6;
   font-size: 18px;
   font-weight: 400;
+  animation: from_top 0.5s ease-in;
+
 }
 .options ul li a:hover {
   color: var(--main_color);
@@ -335,6 +350,7 @@ p {
 
 #about {
   max-width: 70vw;
+  margin-top: 200px;
 }
 .mie-title {
   display: flex;
@@ -424,13 +440,14 @@ p {
 
 #work{
   margin: auto;
-  margin-top: 150px;
+  /* margin-top: 300px; */
   display: flex;
   justify-content: center;
 }
 .work{
   max-width: 700px;
   align-items: center;
+  margin-top: 200px;
 }
 
 .p_p{
@@ -527,6 +544,60 @@ align-items: center;
   margin-bottom: 30px;
   text-align: center;
 }
+
+.back-to-top{
+  position: fixed;
+  right: 20px;
+  cursor: pointer;
+  left: auto;
+  bottom: 30px;
+  border: 1px solid rgba(0, 255, 42, 0.375);
+  border-radius: 10%;
+  padding: 10px;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  background-color: #00ff6a77;
+  /* box-shadow: 0 0 5px var(--main_color); */
+  transition: all 0.5s;
+}
+.back-to-top:hover{
+  background-color: var(--main_color);
+  color: white;
+  box-shadow: rgb(105, 105, 237);
+}
+
+
+
+
+
+
+
+
+
+
+
+@keyframes from_top{
+  0%{
+    top: -200px;
+  }
+  100%{
+    top: 0;
+  }
+}
+@keyframes from_bottom{
+  0%{
+    bottom:-100px;
+  }
+  100%{
+    bottom: 0;
+  }
+}
+
+
+
+
+
+
 
 
 
