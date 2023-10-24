@@ -253,7 +253,7 @@ p {
   font-size: 18px;
   font-family: "Sometype Mono", monospace;
   margin-bottom: 10px;
-  width: 70vw;
+  width: 100%;
   margin-left: 5px;
 }
 .intro .para-2 {
@@ -272,12 +272,12 @@ p {
   white-space: normal;
   margin: 10px 0;
   word-wrap: break-word;
-  width: 70vw;
+  width: 100%;
   line-height: 0.9;
 }
 
 .intro .para-4 {
-  width: 70vw;
+  width: 100%;
   display: block;
   white-space: normal;
   /* padding: 10px; */
@@ -448,7 +448,7 @@ p {
 }
 
 .contact{
-  width: 60vw;
+  width: 80vw;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -606,7 +606,16 @@ align-items: center;
     width: 40px;
     height: 5px;
     transform-origin: center;
+    animation: close-hamb 0.2s linear;
     transition: all 0.2s ease-in;
+  }
+  @keyframes close-hamb {
+    0%{
+    margin: 7px 0;
+    }
+    100%{
+      margin: 0 0;
+    }
   }
 
   .bar-1-open {
@@ -761,6 +770,12 @@ align-items: center;
     margin-left: 0px;
     align-items: center;
   }
+  .content ul li{
+    display: block;
+  }
+  .content{
+    max-width: 90vw;
+  }
   .p__{
     font-size: 15px;
   }
@@ -768,7 +783,7 @@ align-items: center;
     font-size: 15px;
   }
   .contact{
-    max-width: 90vw;
+    max-width: 100vw;
   }
 
 }
