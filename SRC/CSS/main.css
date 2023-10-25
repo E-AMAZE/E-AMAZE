@@ -571,6 +571,11 @@ align-items: center;
   margin-bottom: 30px;
 }
 
+.exp-img-cont img{
+width: 35vw;
+height: 20vw;
+}
+
 
 
 
