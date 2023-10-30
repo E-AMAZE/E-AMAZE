@@ -573,7 +573,7 @@ align-items: center;
 
 .exp-img-cont img{
 width: 35vw;
-height: 20vw;
+height: auto;
 }
 
 
