@@ -652,6 +652,15 @@ margin-bottom: 30px;
   font-size: 1vw;
 }
 
+.pr-links{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-top: 15px;
+}
+.pr-links a{
+  margin-left: 15px;
+}
 
 
 
@@ -956,5 +965,33 @@ margin-bottom: 30px;
   }
   .contact{
     max-width: 100vw;
+  }
+  .item{
+    flex-direction: column;
+    width: 90vw;
+  }
+  .exp-img-cont{
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+  }
+  .img-back{
+    width: 90vw;
+  }
+  .exp-img-cont img{
+    width: 100%;
+  }
+  .mi-expr-text{
+    right: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .top-expr-text{
+    margin-bottom: 20px;
+    margin-top: 15px;
+    text-align: center;
+  }
+  .bottom-expr-text ul li{
+    font-size: 3vw;
   }
 }
